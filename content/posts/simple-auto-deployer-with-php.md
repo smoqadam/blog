@@ -8,12 +8,12 @@ How you deploy your projects? Are you using fancy things like Jenkins with lots 
 
 ### Git Hooks
 
-For this article we are using Git hooks. Git hooks is a script that Git runs before or after some events such as: commit, push, merge, create a branch and so on. Although, web-based Git managers such as Github, Gitlab or bitbucket call it Webhooks, it means that the events call a URL (usually in your server) instead of running a script. 
+For this article we are using Git hooks. Git hooks are a script that Git runs before or after some events are triggered such as: commit, push, merge, creating a branch and so on. Although the equivalent of Git Hooks in  web-based Git platforms such as Github, Gitlab or bitbucket are Webhooks, which instead of running a script, call a URL (usually in your server).
 
 
 ### configure webhooks 
 
-first of all, we need to config our repository to use webhooks. For this purpose, go to your repository settings and you will find `Webhooks` on the sidebar.
+first of all, we need to configure our repository to use webhooks. For this purpose, go to your repository settings and you will find `Webhooks` on the sidebar.
 
 ![](/github-settings.png)
 
@@ -39,7 +39,7 @@ For this article, we stick to the first option. You can play with other options 
 
 ### Deployer
 
-In the previouse step we set the push event for our webhook. It means as soon as we push something to the repository, the following http request send to the payload url:
+In the previouse step we set the push event for our webhook. It means as soon as we push something to the repository, the following http request is sent to the payload url:
 
 ```
 Request URL: http://mydomain.com/deployer.php
@@ -52,8 +52,8 @@ X-GitHub-Event: push
 X-Hub-Signature: sha1=81407666112671798a83c608efa69d1052987fe9
 ```
 
-as you can see, there are three custom headers which set by Github. For authorization, we must use 
-`X-Hub-Signature` header. value of `X-Hub-Signature` header is consists of a hash algorithm and a hash string.
+As you can see, there are three custom headers which are set by Github. For authorization, we must use 
+`X-Hub-Signature` header. The value of `X-Hub-Signature` header is consists of a hash algorithm and a hash string.
 
 Create a file called `deployer.php` and put the following content on it:
 
@@ -81,7 +81,7 @@ if ($hash != $secret){
 }
 ```
 
-First, we remove `sha1=` string from the header value then convert the post content to hash with `sha1` algorithm after that we compare two values.  
+First, we remove `sha1=` string from the header value then hash the post content to hash with the `sha1` algorithm, then we compare the values.  
 
 
 ```php
