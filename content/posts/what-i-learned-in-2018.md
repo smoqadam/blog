@@ -17,6 +17,7 @@ As a software engineer, like many others, I would like to work for big companies
 ## My (and probably yours), feeling diagram is like Sin()
 I’m not a psychiatric or medical doctor, but I figure that my feelings about life, work, society and everything else is like a Sin() diagram in mathematics.
 
+![](/feeling.png)
 
 Almost every one of us has had some days, or even months, feeling excellent about everything and vice versa. In my case, I found out these feelings changed regularly and transformation from the excellent to awful happened very fast. For example, some days (or in some cases some hours) I had very passionate feelings about life, society, people or work but these emotions changed with extra little events. As you may guess, I was in an awful state most of the time, but I decided to change it. The most important thing I’ve learned about the diagram is, it’ll pass, whether  you are in an excellent mood or an awful one. Now, I’m trying to do some things to keep me above the x-axis. Even though I find myself below the x-axis sometimes, I will never be hard on myself, because I know it’ll pass.
 
