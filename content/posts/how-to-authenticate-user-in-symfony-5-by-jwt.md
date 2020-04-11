@@ -2,6 +2,12 @@
 title: "How to Authenticate User in Symfony 5 by Jwt"
 date: 2020-04-11T00:11:44+08:00
 draft: false 
+tags:
+    - php
+    - jwt
+    - symfony
+categories:
+    - programming
 ---
 
 ## Introduction {#introduction}
