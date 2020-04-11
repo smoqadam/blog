@@ -4,10 +4,20 @@ date: 2020-04-11T00:11:44+08:00
 draft: false 
 ---
 
+## Introduction {#introduction}
+
+Nowadays, when we are talking about web development, regardless of the type of application or the programming language, one of the first things that come to mind is how to authenticate users. There are many types of authentication ways for this purpose such as login form, oAuth, JWT, API token, etc. 
+
+Reliability, security, easy to use and widely supported in many platform and languages make JWT one of the most popular authentication protocols in the web ecosystem.
+
+In this tutorial, we will learn how to implement JWT in Symfony 5 by using the **firebase/php-jwt** package and AbstractGuardAuthenticator class. There are some bundles or packages already out there like **lexik/LexikJWTAuthenticationBundle** that we can use but at the end of this tutorial, we will learn how can we implement and use Authentication Guard which in Symfony.
+
+
+
+<!--more-->
 ## Table of content
 
 
-- [Introduction](#introduction)
 
 - [Prerequisites](#prerequisites)
 
@@ -68,13 +78,6 @@ draft: false
 
 
 
-## Introduction {#introduction}
-
-Nowadays, when we are talking about web development, regardless of the type of application or the programming language, one of the first things that come to mind is how to authenticate users. There are many types of authentication ways for this purpose such as login form, oAuth, JWT, API token, etc. 
-
-Reliability, security, easy to use and widely supported in many platform and languages make JWT one of the most popular authentication protocols in the web ecosystem.
-
-In this tutorial, we will learn how to implement JWT in Symfony 5 by using the **firebase/php-jwt** package and AbstractGuardAuthenticator class. There are some bundles or packages already out there like **lexik/LexikJWTAuthenticationBundle** that we can use but at the end of this tutorial, we will learn how can we implement and use Authentication Guard which in Symfony.
 
 
 ## Prerequisites {#prerequisites}
@@ -93,12 +96,9 @@ The Symfony team introduced Symfony installation’s binary which helps us to cr
 Use the following command to create a new Symfony project:
 
 
-```
+```shell
 symfony new jwt-tut
 ```
-
-
-**                                                      **
 
 
 ### **Install necessary packages** {#install-necessary-packages}
@@ -106,7 +106,7 @@ symfony new jwt-tut
 Run the following commands to install necessary packages.
 
 
-```
+```bash
 composer require make
 composer require orm
 composer require security
@@ -123,7 +123,7 @@ Whatever authentication system we are going to use, we will always need a User e
 <code>make<strong> </strong></code>command makes it easy to create a new User entity:
 
 
-```
+```bash
 ./bin/console make:user
 ```
 
@@ -133,7 +133,7 @@ after running this command and answering a few questions, the User class will be
 Notice: If you want to create User entity, make sure to implement UserInterface like below:
 
 
-```
+```php
 class User implements UserInterface
 {
 	/**
@@ -160,7 +160,7 @@ class User implements UserInterface
 Open .env file in your root directory and edit DATABASE_URL then run following commands to create the migration and the table:
 
 
-```
+```bash
 ./bin/console make:migration
 
 ./bin/console doctrine:migrations:migrate
@@ -175,7 +175,7 @@ So far we have a User class and we installed necessary packages. It’s time to 
 Create AuthController by running this command:
 
 
-```
+```bash
 ./bin/console make:controller AuthController
 ```
 
@@ -183,14 +183,14 @@ Create AuthController by running this command:
 It will generate AuthController.php under src/Controller directory. 
 
 
-#### **Register ** {#register}
+#### **Register** {#register}
 
 Register doesn’t have many things to explain except UserPasswordEncoderInterface which is responsible for encrypting the user’s password. 
 
 To make this interface work, open config/packages/security.yaml and add the encoder section into it. If encoders already exist just change the algorithm to bcrypt. 
 
 
-```
+```yaml
 security:
     # ...
     encoders:
@@ -204,7 +204,7 @@ Then add the register method to AuthController as below:
 namespace App\Controller;
 
 
-```
+```php
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -244,30 +244,18 @@ To make our JWT token secure, we need to sign it with a secret key and an algori
     
 
 
-<table>
-  <tr>
-   <td><code>parameters:</code>
-<p>
-<code>    jwt_secret: SOME_SECRET</code>
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-  </tr>
-</table>
+```yaml
+parameters:
+    jwt_secret: SOME_SECRET
+```
 
 
-    
-
-        
-
-NOTE: At this point please make sure you are using a strong secret key that no one can guess. 
+> NOTE: At this point please make sure you are using a strong secret key that no one can guess. 
 
 Add the login method to the AuthController:
 
 
-```
+```php
 /**
  * @Route("/auth/login", name="login", methods={"POST"})
  */
@@ -318,7 +306,7 @@ Let's do some tests and see where we are.
 Run the webserver by using `./bin/console server:start` or `symfony server:start`
 
 
-```
+```bash
 $ symfony server:start
 ```
 
@@ -326,7 +314,7 @@ $ symfony server:start
 Then send a request either by Postman or curl to [http://localhost:8000/register](http://localhost:8000/register) 
 
 
-```
+```bash
 $ curl -L -X POST 'http://127.0.0.1:8000/auth/register?email=test@example.com&password=123123'
 ```
 
@@ -334,7 +322,7 @@ $ curl -L -X POST 'http://127.0.0.1:8000/auth/register?email=test@example.com&pa
 it should return the following json:
 
 
-```
+```json
 {
     "email":"test@example.com"
 }
@@ -344,7 +332,7 @@ it should return the following json:
 Then try to login with the credential you used in the register like this:
 
 
-```
+```bash
 $ curl -L -X POST 'http://127.0.0.1:8000/auth/login' -F 'email=test@example.com' -F 'password=123123'
 ```
 
@@ -352,7 +340,7 @@ $ curl -L -X POST 'http://127.0.0.1:8000/auth/login' -F 'email=test@example.com'
 It should return something like this:
 
 
-```
+```json
 {
    "message":"success",
    "token":"Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdEBleGFtcGxlLmNvbSJ9.301menCs_ULON3XsQETjUWsUSV2zGZiZztKmWmt18IM"
@@ -370,7 +358,7 @@ Symfony has an abstract class called AbstractGuardAuthenticator which makes our 
 Create a class and call it JwtAuthenticator.php under src/Security directory. 
 
 
-```
+```php
 namespace App\Security;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ContainerBagInterface;
@@ -395,7 +383,7 @@ EntityManagerInterface will be used to connect to the database to get the user d
 Now extend your class from AbstractGuardAuthenticator and implement the following methods:
 
 
-```
+```php
 namespace App\Security;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\DependencyInjection\ParameterBag\ContainerBagInterface;
@@ -472,23 +460,15 @@ Don’t panic, we will go through all these methods to see how they can help us 
 Whenever a user wants to access a URL or resources that need authentication, but the authentication details were not sent, this method will run. In return, we must return a Response object with a 401 status code.
 
 
-<table>
-  <tr>
-   <td><code>public function start(Request $request, AuthenticationException $authException = null) \
-{ \
-    $data = [ \
-        'message' => 'Authentication Required' \
-    ]; \
-    return new JsonResponse($data, Response::HTTP_UNAUTHORIZED); \
-}</code>
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-  </tr>
-</table>
-
+```php
+public function start(Request $request, AuthenticationException $authException = null) \
+{ 
+    $data = [ 
+        'message' => 'Authentication Required'
+    ];
+    return new JsonResponse($data, Response::HTTP_UNAUTHORIZED);
+}
+```
 
 
 #### support {#support}
@@ -498,7 +478,7 @@ This method checks whether the current request supports the authentication or no
 If return false, authentication will be skipped. 
 
 
-```
+```php
 public function supports(Request $request)
 {
     return $request->headers->has('Authorization');
@@ -512,7 +492,7 @@ public function supports(Request $request)
 This method returns the value of the Authorization header which is the token we return when user login.
 
 
-```
+```php
 public function getCredentials(Request $request)
 {
         return $request->headers->get('Authorization');
@@ -532,7 +512,7 @@ This method is responsible to validate JWT Token and authenticate the user by th
 1. We removed _Bearer_ from our token
 2. Then decoded the JWT token by _JWT::decode_ method. _JWT::decode _receives three arguments_, _first argument is the token, then the secret key and then the algorithm we used to encode the token. If decoding finished successfully it will return the payload otherwise it will throw one of these exceptions:
 
-    ```
+```phpDoc
 * @throws UnexpectedValueException Provided JWT was invalid
 * @throws SignatureInvalidException Provided JWT was invalid because the signature verification failed
 * @throws BeforeValidException Provided JWT is trying to be used before it's eligible as defined by 'nbf'
@@ -545,7 +525,7 @@ This method is responsible to validate JWT Token and authenticate the user by th
 That’s why we put our code inside try/catch to catch exceptions. 
 
 
-```
+```php
 public function getUser($credentials, UserProviderInterface $userProvider)
 {
         try {
@@ -572,7 +552,7 @@ public function getUser($credentials, UserProviderInterface $userProvider)
 As I mentioned before, this method will be called if we throw an AuthenticationException from the getUser method. This must return a Response object.
 
 
-```
+```php
 public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
 {
         return new JsonResponse([
@@ -588,7 +568,7 @@ public function onAuthenticationFailure(Request $request, AuthenticationExceptio
 This method will call if the authentication were successful. however, in our example we don’t need to return anything.
 
 
-```
+```php
 public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $providerKey)
 {
     return;
@@ -602,7 +582,7 @@ public function onAuthenticationSuccess(Request $request, TokenInterface $token,
 Since this is a stateless API we don’t need “remember me” functionality. 
 
 
-```
+```php
 public function supportsRememberMe()
 {
     return false;
@@ -618,7 +598,7 @@ We are almost there. So far, we have implemented register, login and the JWT aut
 For this purpose, open the `config/packages/security.yaml` and change main section under firewall as below:
 
 
-```
+```yaml
 security:
     # ...
     firewalls:
@@ -642,7 +622,7 @@ Our job is almost finished, now it’s time to see if it works or not!
 Create another controller and call it ApiController
 
 
-```
+```bash
 $ ./bin/console make:controller ApiController
 ```
 
@@ -650,7 +630,7 @@ $ ./bin/console make:controller ApiController
 open _src/Controller/ApiController.php_ and add a new method:
 
 
-```
+```php
 /**
 * @Route("/api/test", name="testapi")
 */
@@ -668,7 +648,7 @@ As you can see, the route starts with /api so we should expect any request to th
 Run the following command to see the result:
 
 
-```
+```yaml
 $ curl -L -X GET 'http://127.0.0.1:8000/api/test' -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdEBleGFtcGxlLmNvbSJ9.301menCs_ULON3XsQETjUWsUSV2zGZiZztKmWmt18IM'
  
 {"message": "test!"}
