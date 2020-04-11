@@ -1,4 +1,4 @@
-baseURL = "http://smoqadam.me/"
+baseURL = "https://smoqadam.me/"
 languageCode = "en-us"
 title = "Saeed's Blog"
 theme = "hugo_theme_pickles"
