@@ -1,7 +1,7 @@
 ---
 title: "How to write a PHP Youtube video downloader"
 date: 2020-04-16T21:37:50+08:00
-draft: true
+draft: false
 ---
 
 PHP is not the best language for writing a download manager, but in this article, we are going to learn how we can download videos from Youtube. Because PHP does not support multithreading, we cannot make a proper download manager that split the file into several chunks and download it concurrently. There are some ways to add multithreading to PHP, but for the sake of this article, we won't go through those ways and will stick to single threading.
