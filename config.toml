@@ -12,7 +12,7 @@ publishdir = "public"
   github = "smoqadam"
   linkedin = "saeedmoqadam"
   # Google Analytics API key.
-  # ga_api_key = "Your Google Analytics tracking id"
+  ga_api_key = "UA-168254523-1"
 
 
 [related]
