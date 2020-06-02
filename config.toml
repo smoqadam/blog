@@ -12,8 +12,7 @@ publishdir = "public"
   github = "smoqadam"
   linkedin = "saeedmoqadam"
   # Google Analytics API key.
-  # ga_api_key = "Your Google Analytics tracking id"
-
+  googleAnalytics = "UA-168254523-1"
 
 [related]
   # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
