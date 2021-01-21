@@ -13,7 +13,7 @@ publishdir = "public"
   linkedin = "saeedmoqadam"
   # Google Analytics API key.
   googleAnalytics = "UA-168254523-1"
-
+  subtitle= "my thoughts and ideas about life, programming, and books"
 [related]
   # Only include matches with rank >= threshold. This is a normalized rank between 0 and 100.
   threshold = 80
