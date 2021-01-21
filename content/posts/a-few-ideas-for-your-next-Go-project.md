@@ -2,11 +2,10 @@
 title: "A few ideas for your next Go project"
 date: 2021-01-21T15:23:45+08:00
 draft: false
-categories:
-- Go
-- programming
-- ideas
----
+tags:
+    - go
+categories: 
+    - programming---
 
 Have you ever been out of idea on what to code for your next open-source or side-project? As a beginner, you can find many resources and tutorials on different beginner-friendly projects out there. But when you pass that level, you just cannot come up with any interesting ideas to work on while you're learning.
 
