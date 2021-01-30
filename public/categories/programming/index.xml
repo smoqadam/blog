@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programming on Saeed&#39;s Blog</title>
+    <link>https://smoqadam.me/categories/programming/</link>
+    <description>Recent content in programming on Saeed&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jan 2021 15:23:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://smoqadam.me/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A few ideas for your next Go project</title>
+      <link>https://smoqadam.me/posts/a-few-ideas-for-your-next-go-project/</link>
+      <pubDate>Thu, 21 Jan 2021 15:23:45 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/posts/a-few-ideas-for-your-next-go-project/</guid>
+      <description>Have you ever been out of idea on what to code for your next open-source or side-project? As a beginner, you can find many resources and tutorials on different beginner-friendly projects out there. But when you pass that level, you just cannot come up with any interesting ideas to work on while you&amp;rsquo;re learning.
+You can take any of these ideas for your next project, and dont&amp;rsquo; forget the purpose of doing this, is learning.</description>
+    </item>
+    
+    <item>
+      <title>Build a Simple Deployer with Go by Using the Github Webhooks</title>
+      <link>https://smoqadam.me/posts/build-a-simple-deployer-in-go-by-usin-github-hooks/</link>
+      <pubDate>Mon, 11 May 2020 16:58:01 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/posts/build-a-simple-deployer-in-go-by-usin-github-hooks/</guid>
+      <description>&lt;p&gt;In my journey to learn Go, I decided to start write about the topics that I&amp;rsquo;m learning. This technique known as Feynman Learning Technique. I have done this long time ago when I wanted to learn PHP, I started a blog in Persian, and start to write about everything I was learning about PHP. These articles might not be useful for experienced programmers, but it helps me to have a deep understanding about the stuff I&amp;rsquo;m going to learn.&lt;/p&gt;
+&lt;p&gt;In this article, I want to write a simple deployer by using Github Webhooks.&lt;/p&gt;
+&lt;p&gt;Anyway, please let me know if you find any issues or mistakes. We can disscuss about it and we can learn together.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to Authenticate User in Symfony 5 by Jwt</title>
+      <link>https://smoqadam.me/posts/how-to-authenticate-user-in-symfony-5-by-jwt/</link>
+      <pubDate>Sat, 11 Apr 2020 00:11:44 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/posts/how-to-authenticate-user-in-symfony-5-by-jwt/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Nowadays, when we are talking about web development, regardless of the type of application or the programming language, one of the first things that come to mind is how to authenticate users. There are many types of authentication ways for this purpose such as login form, oAuth, JWT, API token, etc.&lt;/p&gt;
+&lt;p&gt;Reliability, security, easy to use and widely supported in many platform and languages make JWT one of the most popular authentication protocols in the web ecosystem.&lt;/p&gt;
+&lt;p&gt;In this tutorial, we will learn how to implement JWT in Symfony 5 by using the &lt;strong&gt;firebase/php-jwt&lt;/strong&gt; package and AbstractGuardAuthenticator class. There are some bundles or packages already out there like &lt;strong&gt;lexik/LexikJWTAuthenticationBundle&lt;/strong&gt; that we can use but at the end of this tutorial, we will learn how can we implement and use Authentication Guard which in Symfony.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

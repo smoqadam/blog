@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Saeed&#39;s Blog</title>
+    <link>https://smoqadam.me/tags/</link>
+    <description>Recent content in Tags on Saeed&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jan 2021 15:23:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://smoqadam.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>go</title>
+      <link>https://smoqadam.me/tags/go/</link>
+      <pubDate>Thu, 21 Jan 2021 15:23:45 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>idea</title>
+      <link>https://smoqadam.me/tags/idea/</link>
+      <pubDate>Thu, 21 Jan 2021 15:23:45 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/tags/idea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book</title>
+      <link>https://smoqadam.me/tags/book/</link>
+      <pubDate>Sun, 17 Jan 2021 16:08:20 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/tags/book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>snippets</title>
+      <link>https://smoqadam.me/tags/snippets/</link>
+      <pubDate>Sun, 17 Jan 2021 16:08:20 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/tags/snippets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jwt</title>
+      <link>https://smoqadam.me/tags/jwt/</link>
+      <pubDate>Sat, 11 Apr 2020 00:11:44 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/tags/jwt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php</title>
+      <link>https://smoqadam.me/tags/php/</link>
+      <pubDate>Sat, 11 Apr 2020 00:11:44 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>symfony</title>
+      <link>https://smoqadam.me/tags/symfony/</link>
+      <pubDate>Sat, 11 Apr 2020 00:11:44 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/tags/symfony/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jwt on Saeed&#39;s Blog</title>
+    <link>https://smoqadam.me/tags/jwt/</link>
+    <description>Recent content in jwt on Saeed&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Apr 2020 00:11:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://smoqadam.me/tags/jwt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Authenticate User in Symfony 5 by Jwt</title>
+      <link>https://smoqadam.me/posts/how-to-authenticate-user-in-symfony-5-by-jwt/</link>
+      <pubDate>Sat, 11 Apr 2020 00:11:44 +0800</pubDate>
+      
+      <guid>https://smoqadam.me/posts/how-to-authenticate-user-in-symfony-5-by-jwt/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Nowadays, when we are talking about web development, regardless of the type of application or the programming language, one of the first things that come to mind is how to authenticate users. There are many types of authentication ways for this purpose such as login form, oAuth, JWT, API token, etc.&lt;/p&gt;
+&lt;p&gt;Reliability, security, easy to use and widely supported in many platform and languages make JWT one of the most popular authentication protocols in the web ecosystem.&lt;/p&gt;
+&lt;p&gt;In this tutorial, we will learn how to implement JWT in Symfony 5 by using the &lt;strong&gt;firebase/php-jwt&lt;/strong&gt; package and AbstractGuardAuthenticator class. There are some bundles or packages already out there like &lt;strong&gt;lexik/LexikJWTAuthenticationBundle&lt;/strong&gt; that we can use but at the end of this tutorial, we will learn how can we implement and use Authentication Guard which in Symfony.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

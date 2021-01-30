@@ -49,7 +49,6 @@
 
 ### Hugo ###
 # Generated files by hugo
-/public/
 /resources/_gen/
 hugo_stats.json
 

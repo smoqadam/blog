@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://smoqadam.me/posts/a-few-ideas-for-your-next-go-project/</loc>
+    <lastmod>2021-01-21T15:23:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/categories/</loc>
+    <lastmod>2021-01-21T15:23:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/tags/go/</loc>
+    <lastmod>2021-01-21T15:23:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/tags/idea/</loc>
+    <lastmod>2021-01-21T15:23:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/posts/</loc>
+    <lastmod>2021-01-21T15:23:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/categories/programming/</loc>
+    <lastmod>2021-01-21T15:23:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/</loc>
+    <lastmod>2021-01-21T15:23:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/tags/</loc>
+    <lastmod>2021-01-21T15:23:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/tags/book/</loc>
+    <lastmod>2021-01-17T16:08:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/posts/mans-search-for-meaning-highlights/</loc>
+    <lastmod>2021-01-17T16:08:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/tags/snippets/</loc>
+    <lastmod>2021-01-17T16:08:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/posts/2020-in-a-nutshell/</loc>
+    <lastmod>2021-01-14T21:23:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/categories/personal/</loc>
+    <lastmod>2021-01-14T21:23:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/posts/build-a-simple-deployer-in-go-by-usin-github-hooks/</loc>
+    <lastmod>2020-05-11T16:58:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/posts/how-download-youtube-videos-by-php/</loc>
+    <lastmod>2020-04-16T21:37:50+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/posts/how-to-authenticate-user-in-symfony-5-by-jwt/</loc>
+    <lastmod>2020-04-11T00:11:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/tags/jwt/</loc>
+    <lastmod>2020-04-11T00:11:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/tags/php/</loc>
+    <lastmod>2020-04-11T00:11:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/tags/symfony/</loc>
+    <lastmod>2020-04-11T00:11:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/posts/what-i-learned-in-2018/</loc>
+    <lastmod>2019-02-02T20:10:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://smoqadam.me/posts/simple-auto-deployer-with-php/</loc>
+    <lastmod>2018-12-15T16:16:50+00:00</lastmod>
+  </url>
+  
+</urlset>
