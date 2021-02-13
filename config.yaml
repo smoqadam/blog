@@ -1,0 +1,72 @@
+baseURL: "https://smoqadam.me"
+title: Saeed's Blog 
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: "UA-168254523-1"
+
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: Saeed's blog
+    author: Saeed 
+
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: true
+    ShowShareButtons: false
+    disableSpecial1stPost: false
+    comments: false
+    hidemeta: false
+    showtoc: false
+    tocopen: false
+
+    label:
+        text: "Saeed's Blog"
+        iconHeight: 35
+    
+    # home-info mode
+    homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: My thoughts and ideas on life, programming, and books. 
+
+    socialIcons:
+        - name: stackoverflow
+          url: "https://stackoverflow.com/users/1103397/saeed-m?tab=profile"
+        - name: github
+          url: "https://github.com/smoqadam"
+
+menu:
+    main:
+        - identifier:
+          name: About
+          url: /pages/about
+          weight: 3
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 10
+        - identifier: example
+          name: ideasfor.dev 
+          url: https://ideasfor.dev
+          weight: 30
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+# pygmentsUseClasses: true
+# markup:
+#     highlight:
+#         # anchorLineNos: true
+#         codeFences: true
+#         guessSyntax: true
+#         lineNos: true
+#         style: monokai
+
